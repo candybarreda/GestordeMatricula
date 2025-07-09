@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Gestión Educativa</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/dashboard.html">Inicio</a></li>
+                    <li class="nav-admin"><a href="/admin/students.html">Gestión de Estudiantes</a></li>
+                    <li class="nav-admin"><a href="/admin/courses.html">Gestión de Cursos</a></li>
+                    <li class="nav-admin"><a href="/admin/enrollments.html">Gestión de Inscripciones</a></li>
+                    <li class="nav-admin"><a href="/admin/users.html">Gestión de Usuarios</a></li>
+                    <li class="nav-admin"><a href="/admin/assign_courses.html">Asignar Cursos a Profesores</a></li> 
+                    <li class="nav-parent"><a href="/parent/student_courses.html">Cursos de Mis Estudiantes (Padre)</a></li>
+                    <li class="nav-parent"><a href="/parent/my_notifications.html">Mis Notificaciones (Padre)</a></li>
+                    <!--<li class="nav-parent"><a href="/parent/grades.html">Calificaciones de Mis Hijos (Padre)</a></li>-->
+                    <li class="nav-parent"><a href="/parent/my_children.html">Mis Hijos(padre)</a></li>
+                     <!--<li ><a href="/student/my_courses.html">Mis Cursos (Estudiante)</a></li>-->
+                    <li class="nav-teacher"><a href="/teacher/my_courses.html">Mis Cursos (Profesor)</a></li>
+                    <li><a href="/message/inbox.html" id="messagesLink">Mensajes</a></li>
+                    <li><a href="/profile.html">Mi Perfil</a></li>
+                    <li><a href="#" id="logoutButton">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="profile-page">
+        <section class="profile-section">
+            <div class="container">
+                <h2>Mi Perfil</h2>
+
+                <div class="form-container">
+                    <h3>Actualizar Información Personal</h3>
+                    <form id="profileForm" class="data-form">
+                        <input type="hidden" id="userId" name="id">
+                        <div class="form-group">
+                            <label for="username">Nombre de Usuario:</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="role">Rol:</label>
+                            <select id="role" name="role" required>
+                              <option value="" default></option>
+                              <option value="madre">Madre</option>
+                              <option value="padre">padre</option>
+                              <option value="tutor">Tutor</option>
+                            </select>  </div>
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                        <div id="profileMessage" class="message-area"></div>
+                    </form>
+                </div>
+
+                <div class="form-container password-change-form">
+                    <h3>Cambiar Contraseña</h3>
+                    <form id="passwordForm" class="data-form">
+                        <div class="form-group">
+                            <label for="currentPassword">Contraseña Actual:</label>
+                            <input type="password" id="currentPassword" name="currentPassword" required autocomplete="current-password">
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">Nueva Contraseña:</label>
+                            <input type="password" id="newPassword" name="newPassword" required autocomplete="new-password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmNewPassword">Confirmar Nueva Contraseña:</label>
+                            <input type="password" id="confirmNewPassword" name="confirmNewPassword" required autocomplete="new-password">
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Cambiar Contraseña</button>
+                        <div id="passwordMessage" class="message-area"></div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Sistema de Gestión Educativa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/dashboard.js"></script>
+    <script src="/js/profile.js"></script>
+</body>
+</html>

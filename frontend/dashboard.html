@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sistema de Gestión Educativa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Gestion Educativa</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/dashboard.html">Inicio</a></li>
+                    <li class="nav-admin"><a href="/admin/students.html">Gestión de Estudiantes</a></li>
+                    <li class="nav-admin"><a href="/admin/courses.html">Gestión de Cursos</a></li>
+                    <li class="nav-admin"><a href="/admin/enrollments.html">Gestión de Inscripciones</a></li>
+                    <li class="nav-admin"><a href="/admin/users.html">Gestión de Usuarios</a></li>
+                    <li class="nav-admin"><a href="/admin/assign_courses.html">Asignar Cursos a Profesores</a></li> 
+                    <li class="nav-parent"><a href="/parent/student_courses.html">Cursos de Mis Estudiantes (Padre)</a></li>
+                    <li class="nav-parent"><a href="/parent/my_notifications.html">Mis Notificaciones (Padre)</a></li>
+                    <!--<li class="nav-parent"><a href="/parent/grades.html">Calificaciones de Mis Hijos (Padre)</a></li>-->
+                    <li class="nav-parent"><a href="/parent/my_children.html">Mis Hijos(padre)</a></li>
+                <!--<li ><a href="/student/my_courses.html">Mis Cursos (Estudiante)</a></li> -->
+                    <li class="nav-teacher"><a href="/teacher/my_courses.html">Mis Cursos (Profesor)</a></li>
+                    <li><a href="/message/inbox.html" id="messagesLink">Mensajes</a></li>
+                    <li><a href="/profile.html">Mi Perfil</a></li>
+                    <li><a href="#" id="logoutButton">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-page">
+        <section class="dashboard-welcome">
+            <div class="container">
+                <h2 class="Bienvenido">¡Bienvenido, <span id="userName">Usuario</span>!</h2>
+                <p>Tu rol en el sistema es: <strong id="userRole">Cargando...</strong></p>
+
+                <div id="adminDashboardContent" class="dashboard-content" style="display:none;">
+                    <h3>Panel de Administrador</h3>
+                    <p>Aquí tendrás acceso completo a todas las funcionalidades del sistema.</p>
+                    <div class="dashboard-features">
+                        <a href="/admin/students.html" class="btn btn-primary"><i class="fas fa-users"></i> Gestión de Estudiantes</a>
+                        <a href="/admin/enrollments.html" class="btn btn-secondary"><i class="fas fa-user-plus"></i> Gestión de Inscripciones</a>
+                        <a href="/admin/reports.html" class="btn btn-info"><i class="fas fa-chart-line"></i> Reportes</a>
+                    </div>
+                </div>
+
+                <div id="parentDashboardContent" class="dashboard-content" style="display:none;">
+                    <h3>Panel de Padres/Madres</h3>
+                    <p>Consulta el progreso académico de tus hijos, notas, asistencia y pagos.</p>
+                    <div class="dashboard-features">
+                        <a href="/parent/my-children.html" class="btn btn-primary"><i class="fas fa-child"></i> Mis Hijos</a>
+                        <a href="/parent/payments.html" class="btn btn-secondary"><i class="fas fa-credit-card"></i> Pagos y Facturación</a>
+                    </div>
+                </div>
+
+                <div id="teacherDashboardContent" class="dashboard-content" style="display:none;">
+                    <h3>Panel de Tutores/Profesores</h3>
+                    <p>Accede a tus cursos, gestiona las notas de tus alumnos y la asistencia.</p>
+                    <div class="dashboard-features">
+                        <a href="/teacher/my-courses.html" class="btn btn-primary"><i class="fas fa-chalkboard-teacher"></i> Mis Cursos</a>
+                        <a href="/teacher/grades.html" class="btn btn-secondary"><i class="fas fa-clipboard-list"></i> Registrar Notas</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Sistema de Gestión Educativa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>

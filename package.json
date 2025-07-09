@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "start": "nodemon --ignore './frontend/**' src/app.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "json": "^11.0.0",
+    "msnodesqlv8": "^4.5.0",
+    "mssql": "^11.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

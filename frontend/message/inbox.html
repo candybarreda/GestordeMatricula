@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensajes (Bandeja de Entrada)</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Gestión Educativa</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/dashboard.html">Inicio</a></li>
+                    <li class="nav-admin"><a href="/admin/students.html">Gestión de Estudiantes</a></li>
+                    <li class="nav-admin"><a href="/admin/courses.html">Gestión de Cursos</a></li>
+                    <li class="nav-admin"><a href="/admin/enrollments.html">Gestión de Inscripciones</a></li>
+                    <li class="nav-admin"><a href="/admin/users.html">Gestión de Usuarios</a></li>
+                    <li class="nav-admin"><a href="/admin/assign_courses.html">Asignar Cursos a Profesores</a></li> 
+                    <li class="nav-parent"><a href="/parent/student_courses.html">Cursos de Mis Estudiantes (Padre)</a></li>
+                    <li class="nav-parent"><a href="/parent/my_notifications.html">Mis Notificaciones (Padre)</a></li>
+                    <!--<li class="nav-parent"><a href="/parent/grades.html">Calificaciones de Mis Hijos (Padre)</a></li>-->
+                    <li class="nav-parent"><a href="/parent/my_children.html">Mis Hijos(padre)</a></li>
+                    <!--<li ><a href="/student/my_courses.html">Mis Cursos (Estudiante)</a></li>-->
+                    <li class="nav-teacher"><a href="/teacher/my_courses.html">Mis Cursos (Profesor)</a></li>
+                    <li><a href="/message/inbox.html" id="messagesLink">Mensajes</a></li>
+                    <li><a href="/profile.html">Mi Perfil</a></li>
+                    <li><a href="#" id="logoutButton">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="message-page">
+        <section class="messages-section">
+            <div class="container">
+                <h2 id="messagesWelcome">Mis Mensajes</h2>
+                <div class="tabs">
+                    <button class="tab-button active" id="inboxTab">Bandeja de Entrada</button>
+                    <button class="tab-button" id="sentTab">Enviados</button>
+                    <button class="tab-button" id="composeTab">Redactar Mensaje</button>
+                </div>
+
+                <div id="messagesMessage" class="message-area"></div>
+
+                <div id="inboxContent" class="tab-content active">
+                    <h3>Mensajes Recibidos</h3>
+                    <table class="data-table messages-table">
+                        <thead>
+                            <tr>
+                                <th>Remitente</th>
+                                <th>Asunto</th>
+                                <th>Estudiante (si aplica)</th>
+                                <th>Fecha</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            </tbody>
+                    </table>
+                </div>
+
+                <div id="sentContent" class="tab-content">
+                    <h3>Mensajes Enviados</h3>
+                    <table class="data-table messages-table">
+                        <thead>
+                            <tr>
+                                <th>Destinatario</th>
+                                <th>Asunto</th>
+                                <th>Estudiante (si aplica)</th>
+                                <th>Fecha</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            </tbody>
+                    </table>
+                </div>
+
+                <div id="composeContent" class="tab-content">
+                    <h3>Redactar Nuevo Mensaje</h3>
+                    <form id="sendMessageForm" class="form-container">
+                        <div class="form-group">
+                            <label for="recipientSelect">Destinatario:</label>
+                            <select id="recipientSelect" required></select>
+                        </div>
+                        <div class="form-group">
+                            <label for="studentRelatedSelect">Estudiante Relacionado (Opcional):</label>
+                            <select id="studentRelatedSelect"></select>
+                        </div>
+                        <div class="form-group">
+                            <label for="messageSubject">Asunto:</label>
+                            <input type="text" id="messageSubject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="messageContent">Contenido:</label>
+                            <textarea id="messageContent" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="button">Enviar Mensaje</button>
+                    </form>
+                    <div id="composeMessageResult" class="message-area"></div>
+                </div>
+
+                <div id="messageModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+                        <h3 id="modalSubject"></h3>
+                        <p><strong>De:</strong> <span id="modalSender"></span></p>
+                        <p><strong>Para:</strong> <span id="modalRecipient"></span></p>
+                        <p><strong>Estudiante:</strong> <span id="modalStudent"></span></p>
+                        <p><strong>Fecha:</strong> <span id="modalDate"></span></p>
+                        <hr>
+                        <p id="modalContent"></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Sistema de Gestión Educativa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/dashboard.js"></script>
+    <script src="/js/message/inbox.js"></script> </body>
+</html>

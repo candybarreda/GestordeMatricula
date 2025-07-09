@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignar Cursos a Profesores (Admin)</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Gestión Educativa</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/dashboard.html">Dashboard</a></li>
+                    <li class="nav-admin"><a href="/admin/students.html">Gestión de Estudiantes</a></li>
+                    <li class="nav-admin"><a href="/admin/courses.html">Gestión de Cursos</a></li>
+                    <li class="nav-admin"><a href="/admin/enrollments.html">Gestión de Inscripciones</a></li>
+                    <li class="nav-admin"><a href="/admin/users.html">Gestión de Usuarios</a></li>
+                    <li class="nav-admin"><a href="/admin/assign_courses.html">Asignar Cursos a Profesores</a></li> <li class="nav-parent"><a href="/parent/student_courses.html">Cursos de Mis Estudiantes (Padre)</a></li>
+                    <li class="nav-parent"><a href="/parent/my_notifications.html">Mis Notificaciones (Padre)</a></li>
+                    <li class="nav-parent"><a href="/parent/grades.html">Calificaciones de Mis Hijos (Padre)</a></li>
+                    <li class="nav-student"><a href="/student/my_courses.html">Mis Cursos (Estudiante)</a></li>
+                    <li class="nav-teacher"><a href="/teacher/my_courses.html">Mis Cursos (Profesor)</a></li>
+                    <li><a href="/message/inbox.html" id="messagesLink">Mensajes</a></li>
+                    <li><a href="/profile.html">Mi Perfil</a></li>
+                    <li><a href="#" id="logoutButton">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="admin-page">
+        <section class="assignment-section">
+            <div class="container">
+                <h2>Asignar Cursos a Profesores</h2>
+                <div id="assignmentMessage" class="message-area"></div>
+
+                <div class="form-container">
+                    <h3>Nueva Asignación</h3>
+                    <form id="assignCourseForm">
+                        <div class="form-group">
+                            <label for="courseSelect">Seleccionar Curso:</label>
+                            <select id="courseSelect" required></select>
+                        </div>
+                        <div class="form-group">
+                            <label for="teacherSelect">Seleccionar Profesor:</label>
+                            <select id="teacherSelect" required></select>
+                        </div>
+                        <button type="submit" class="button">Asignar Curso</button>
+                    </form>
+                </div>
+
+                <div class="data-display">
+                    <h3>Asignaciones Actuales</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID Curso</th>
+                                <th>Nombre del Curso</th>
+                                <th>ID Profesor</th>
+                                <th>Nombre del Profesor</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="assignmentsTableBody">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Sistema de Gestión Educativa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/dashboard.js"></script>
+    <script src="/js/admin/assign_courses.js"></script> </body>
+</html>

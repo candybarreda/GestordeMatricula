@@ -1,0 +1,709 @@
+/* General Body Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eef2f6; /* Light background */
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+}
+.text{
+  
+}
+.Bienvenido{
+  padding: none;
+  margin: none;
+}
+main {
+  display: flex;
+  flex: 10;
+  position: relative;
+  margin: 0;
+  flex-direction: column;
+}
+/* Header Styles */
+.main-header {
+  background-color: #0056b3; /* Primary Blue */
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.dashboard-welcome{
+  background-image: url("/imges/portada.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-blend-mode: lighten;
+  margin: 0;
+  flex: 12;
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.portada{
+  width: 100%;
+  
+}
+.main-nav ul li {
+  margin-left: 25px;
+}
+
+.main-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+  color: #a0c4ff; /* Lighter blue on hover */
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #28a745; /* Green */
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #218838; /* Darker green */
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #6c757d; /* Gray */
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268; /* Darker gray */
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.8)), url('https://via.placeholder.com/1500x500/0056b3/FFFFFF?text=Educacion') no-repeat center center/cover; /* Placeholder image */
+  color: white;
+  text-align: center;
+  padding:  0;
+}
+
+.hero-section h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-section p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons .btn {
+  margin: 0 10px;
+}
+
+.btn-hero-primary {
+  background-color: #28a745;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.1em;
+}
+
+.btn-hero-secondary {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.1em;
+}
+
+.btn-hero-secondary:hover {
+  background-color: white;
+  color: #0056b3;
+}
+
+
+/* General Section Styling */
+section {
+  padding: 60px 0;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #0056b3;
+  margin-bottom: 50px;
+}
+
+/* Features Section */
+.features-section {
+  background-color: #f8f9fa; /* Light gray for contrast */
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.feature-item {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+.feature-item .icon-large {
+  font-size: 3em;
+  color: #007bff; /* Blue for icons */
+  margin-bottom: 15px;
+}
+
+.feature-item h3 {
+  font-size: 1.5em;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* About Section */
+.about-section {
+  text-align: center;
+}
+
+.about-section p {
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #eef2f6;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.contact-form textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.contact-form button {
+  align-self: flex-start; /* Align button to the left */
+  padding: 12px 30px;
+  font-size: 1.1em;
+}
+
+/* Footer Styles */
+.main-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 0;
+}
+
+.main-footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-header .container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .main-nav ul {
+      flex-direction: column;
+      margin-top: 15px;
+  }
+
+  .main-nav ul li {
+      margin: 10px 0;
+  }
+
+  .hero-section h2 {
+      font-size: 2.2em;
+  }
+
+  .hero-section p {
+      font-size: 1em;
+  }
+
+  .hero-buttons {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .hero-buttons .btn {
+      width: 80%;
+      max-width: 300px;
+  }
+
+  section h2 {
+      font-size: 2em;
+  }
+
+  .feature-grid {
+      grid-template-columns: 1fr; /* Stack items on small screens */
+  }
+}
+/* ... (todo el CSS anterior se mantiene) ... */
+
+/* Añadir al final de public/css/style.css */
+
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 150px); /* Ajusta para que ocupe casi toda la pantalla */
+  padding: 20px;
+  background-color: #f0f4f7; /* Un fondo ligeramente diferente */
+}
+
+.login-section, .register-section { /* Aplica a ambas secciones de auth */
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+}
+
+.login-section h2, .register-section h2 {
+  color: #0056b3;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.auth-form .form-group {
+  margin-bottom: 20px;
+  text-align: left; /* Alinea etiquetas y campos a la izquierda */
+}
+
+.auth-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form input[type="text"] { /* Añadido para futuros formularios como registro */
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.auth-form .btn-primary {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1em;
+  margin-top: 20px;
+}
+
+.auth-links {
+  margin-top: 20px;
+  font-size: 0.95em;
+}
+
+.auth-links a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.auth-links a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.message-area {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.message-area.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message-area.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Responsive adjustments for auth forms */
+@media (max-width: 480px) {
+  .login-section, .register-section {
+      padding: 30px 20px;
+      margin: 0 10px;
+  }
+
+  .login-section h2, .register-section h2 {
+      font-size: 1.8em;
+  }
+}
+.admin-page, .parent-page, .teacher-page { /* Nuevas clases para páginas de roles */
+  padding: 40px 0;
+  /*min-height: calc(100vh - 150px);*/
+  background-color: #f8f9fa;
+}
+
+.students-management-section, .form-container, .table-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+}
+
+.form-container h3, .table-container h3 {
+  color: #0056b3;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+.data-form .form-group {
+  margin-bottom: 15px;
+}
+
+.data-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+.data-form input[type="text"],
+.data-form input[type="email"],
+.data-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box; /* Incluye padding y border en el ancho */
+}
+
+.data-form button[type="submit"] {
+  width: auto;
+  padding: 10px 25px;
+  font-size: 1.1em;
+  margin-top: 20px;
+  display: block; /* Para que ocupe su propia línea */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.data-table th, .data-table td {
+  border: 1px solid #e0e0e0;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.data-table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+.data-table .btn-sm {
+  padding: 5px 10px;
+  font-size: 0.8em;
+  margin-right: 5px;
+  border-radius: 4px;
+}
+
+.data-table .btn-edit {
+  background-color: #ffc107;
+  color: white;
+  border: none;
+}
+.data-table .btn-edit:hover {
+  background-color: #e0a800;
+}
+
+.data-table .btn-delete {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+.data-table .btn-delete:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  .data-table, .data-table tbody, .data-table td, .data-table th, .data-table thead, .data-table tr {
+      display: block;
+  }
+  .data-table thead {
+      display: none;
+  }
+  .data-table tr {
+      margin-bottom: 15px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+  }
+  .data-table td {
+      border: none;
+      position: relative;
+      padding-left: 50%;
+      text-align: right;
+  }
+  .data-table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 45%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+  }
+}
+/* ... (Todo tu CSS anterior) ... */
+
+/* Añadir al final de public/css/style.css o frontend/css/style.css */
+
+/* Estilos del Modal */
+/* Estilos del Modal */
+.modal {
+  display: none; /* ¡ASEGÚRATE DE QUE ESTA LÍNEA ESTÉ AQUÍ! */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto; /* Centra el contenido */
+  padding: 30px;
+  border: 1px solid #888;
+  width: 90%; /* Ancho responsive */
+  max-width: 600px; /* Ancho máximo */
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative; /* Para posicionar el botón de cerrar */
+}
+
+.close-modal-btn {
+  color: #aaa;
+  float: right; /* Alinea a la derecha */
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.close-modal-btn:hover,
+.close-modal-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content h3 {
+  color: #0056b3;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.6em;
+}
+
+/* Reutiliza .data-form para el formulario dentro del modal */
+.modal-content .data-form button[type="submit"] {
+  width: 100%;
+  margin-top: 25px;
+}
+
+/* Mensajes dentro del modal */
+.modal-content .message-area {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.modal-content .message-area.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.modal-content .message-area.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.modal-content .message-area.info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+.simple-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.simple-list li {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.simple-list li:last-child {
+  border-bottom: none;
+}
+
+.simple-list li:hover {
+  background-color: #e0e0e0;
+}
+
+.simple-list li.active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.students-list-container {
+  margin-bottom: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.courses-details-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Para ocultar/mostrar elementos de navegación según el rol */
+/* Asegúrate de que .nav-admin ya esté definido para el admin.
+ Añade la clase .nav-parent a los elementos que solo verán los padres. */
+.nav-parent {
+  display: none; /* Por defecto oculto, JS lo mostrará */
+}

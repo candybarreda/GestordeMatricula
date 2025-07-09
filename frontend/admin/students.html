@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Estudiantes - Admin</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Gestión Educativa</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/dashboard.html">Dashboard</a></li>
+                    <li class="nav-admin"><a href="/admin/students.html">Gestión de Estudiantes</a></li>
+                    <li class="nav-admin"><a href="./courses.html">Gestión de Cursos</a></li>
+                    <li><a href="#" id="logoutButton">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="admin-page">
+        <section class="students-management-section">
+            <div class="container">
+                <h2>Gestión de Estudiantes</h2>
+
+                <div class="form-container">
+                    <h3>Añadir Nuevo Estudiante</h3>
+                    <form id="addStudentForm" class="data-form">
+                        <div class="form-group">
+                            <label for="studentName">Nombre Completo:</label>
+                            <input type="text" id="studentName" name="name" required placeholder="Nombre del Estudiante">
+                        </div>
+                        <div class="form-group">
+                            <label for="studentEmail">Correo Electrónico:</label>
+                            <input type="email" id="studentEmail" name="email" required placeholder="correo@estudiante.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="studentGrade">Grado/Nivel:</label>
+                            <input type="text" id="studentGrade" name="grade" required placeholder="Ej: 5to Grado, Nivel Inicial">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Añadir Estudiante</button>
+                        <div id="addStudentMessage" class="message-area"></div>
+                    </form>
+                </div>
+
+                <div class="table-container">
+                    <h3>Lista de Estudiantes</h3>
+                    <div id="studentsListMessage" class="message-area"></div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Email</th>
+                                <th>Grado/Nivel</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentsTableBody">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="editStudentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal-btn">&times;</span>
+            <h3>Editar Estudiante</h3>
+            <form id="editStudentForm" class="data-form">
+                <input type="hidden" id="editStudentId" name="id">
+                <div class="form-group">
+                    <label for="editStudentName">Nombre Completo:</label>
+                    <input type="text" id="editStudentName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="editStudentEmail">Correo Electrónico:</label>
+                    <input type="email" id="editStudentEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="editStudentGrade">Grado/Nivel:</label>
+                    <input type="text" id="editStudentGrade" name="grade" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                <div id="editStudentMessage" class="message-area"></div>
+            </form>
+        </div>
+    </div>
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Sistema de Gestión Educativa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/dashboard.js"></script> <script src="/admin/students.js"></script> </body>
+</html>

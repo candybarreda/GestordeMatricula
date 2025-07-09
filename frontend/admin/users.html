@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios - Admin</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Gestión Educativa</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/dashboard.html">Inicio</a></li>
+                    <li class="nav-admin"><a href="/admin/students.html">Gestión de Estudiantes</a></li>
+                    <li class="nav-admin"><a href="/admin/courses.html">Gestión de Cursos</a></li>
+                    <li class="nav-admin"><a href="/admin/enrollments.html">Gestión de Inscripciones</a></li>
+                    <li class="nav-admin"><a href="/admin/users.html">Gestión de Usuarios</a></li>
+                    <li><a href="#" id="logoutButton">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="admin-page">
+        <section class="users-management-section">
+            <div class="container">
+                <h2>Gestión de Usuarios del Sistema</h2>
+
+                <div class="table-container">
+                    <h3>Lista de Usuarios</h3>
+                    <div id="usersListMessage" class="message-area"></div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre de Usuario</th>
+                                <th>Email</th>
+                                <th>Rol</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTableBody">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Sistema de Gestión Educativa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="editUserModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal-btn">&times;</span>
+            <h3>Editar Usuario</h3>
+            <form id="editUserForm" class="data-form">
+                <input type="hidden" id="editUserId" name="id">
+                <div class="form-group">
+                    <label for="editUserName">Nombre de Usuario:</label>
+                    <input type="text" id="editUserName" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="editUserEmail">Correo Electrónico:</label>
+                    <input type="email" id="editUserEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="editUserRole">Rol:</label>
+                    <select id="editUserRole" name="role" required>
+                        <option value="Admin">Admin</option>
+                        <option value="Parent">Parent</option>
+                        <option value="Teacher">Teacher</option>
+                        <option value="Student">Student</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                <div id="editUserMessage" class="message-area"></div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="/js/dashboard.js"></script> <script src="/admin/users.js"></script> </body>
+</html>

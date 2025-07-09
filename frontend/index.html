@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión Educativa - Prototipo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>I.E.P. Genios Aureliano Baldor E.I.R.L.</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#features">Características</a></li>
+                    <li><a href="#about">Acerca de</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="login.html" class="btn btn-primary">Iniciar Sesión</a></li>
+                    <li><a href="/register.html" class="btn btn-secondary">Registrarse</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <img  class="portada"  src="imges/portada.jpg" alt="portada" />
+            <div class="container">
+               <div class="text">
+                    <h2 >Simplificando la Administración Educativa para Todos</h2>
+                    <p >Accede de forma segura al historial académico, gestiona inscripciones y mantente conectado con la comunidad educativa.</p>
+               </div>
+                
+                <div class="hero-buttons">
+                    <a href="login.html" class="btn btn-hero-primary">Acceder Ahora</a>
+                    <a href="/register.html" class="btn btn-hero-secondary">Quiero Registrarme</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2>¿Qué puedes hacer con nuestro sistema?</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-user-graduate icon-large"></i>
+                        <h3>Gestión de Estudiantes</h3>
+                        <p>Actualiza datos personales y consulta el historial académico completo de cada estudiante.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-lock icon-large"></i>
+                        <h3>Acceso Seguro</h3>
+                        <p>Plataforma con autenticación robusta para padres, tutores, y administradores.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-cash-register icon-large"></i>
+                        <h3>Inscripciones y Pagos</h3>
+                        <p>Proceso de inscripción simplificado con verificación de vacantes y simulación de pagos en línea.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-chart-bar icon-large"></i>
+                        <h3>Reportes Detallados</h3>
+                        <p>Genera informes de inscripciones y estudiantes, y recibe confirmaciones por email.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-bell icon-large"></i>
+                        <h3>Notificaciones Inteligentes</h3>
+                        <p>Recibe alertas sobre vacantes y recordatorios importantes directamente en tu bandeja de entrada.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-book-open icon-large"></i>
+                        <h3>Historial Académico</h3>
+                        <p>Consulta las notas, asistencia y el progreso de cada estudiante de manera organizada.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>Acerca de Nuestro Sistema</h2>
+                <p>Nuestro objetivo es transformar la gestión educativa, ofreciendo una plataforma intuitiva y segura que conecta a estudiantes, padres y la administración. Facilitamos cada proceso, desde la inscripción hasta el seguimiento académico, para que la educación sea más accesible y eficiente.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contáctanos</h2>
+                <p>¿Tienes preguntas o necesitas soporte? Envíanos un mensaje.</p>
+                <form class="contact-form">
+                    <input type="text" placeholder="Tu Nombre" required>
+                    <input type="email" placeholder="Tu Correo Electrónico" required>
+                    <textarea placeholder="Tu Mensaje" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Sistema de Gestión Educativa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
