@@ -71,4 +71,4 @@ EXPOSE ${PORT:-3000}
 
 # Define el comando para iniciar la aplicación.
 # Docker pasará automáticamente las variables de entorno definidas al ejecutar el contenedor.
-CMD ["npm", "start:prod"]
+CMD ["npm", "run", "start:prod"]
